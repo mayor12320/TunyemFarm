@@ -1,0 +1,53 @@
+/* ============================================================
+   style.css  — Only styles that Tailwind cannot handle inline
+   Everything else is now Tailwind utility classes in the HTML.
+   ============================================================ */
+
+/* 1. Hamburger open/close animation */
+.hamburger.open span:nth-child(1) { transform: translateY(8px) rotate(45deg); }
+.hamburger.open span:nth-child(2) { opacity: 0; }
+.hamburger.open span:nth-child(3) { transform: translateY(-8px) rotate(-45deg); }
+
+/* 2. Hero dark overlay (uses ::before pseudo-element) */
+.hero::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+    background: rgba(0, 0, 0, 0.45);
+}
+
+/* 3. Gallery card hover lift (group-hover in Tailwind requires a parent wrapper — simpler here) */
+.gallery-card:hover { transform: translateY(-5px); }
+
+
+#backToTop {
+    position: fixed;
+    bottom: 25px;
+    right: 25px;
+    width: 55px;
+    height: 55px;
+    border: none;
+    border-radius: 50%;
+    background: #2e7d32;
+    color: white;
+    font-size: 22px;
+    display: flex;              /* ← Change this */
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+    z-index: 9999;
+    box-shadow: 0 5px 15px rgba(0,0,0,.3);
+    transition: all 0.3s ease;
+}
+
+#backToTop.show {
+    display: flex;
+}
+
+#backToTop:hover {
+    background: #1b5e20;
+    transform: translateY(-4px);
+}
+/* html {
+    scroll-behavior: smooth;
+} */

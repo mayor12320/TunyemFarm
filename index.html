@@ -1,0 +1,267 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tunyem Farm & Consultation</title>
+      <link rel="stylesheet" href="css/style.css">    
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        'farm-green': '#2e7d32',
+                        'farm-green-dark': '#1b5e20',
+                        'farm-green-light': '#81c784',
+                        'farm-bg': '#f5f7f2',
+                    },
+                    fontFamily: {
+                        sans: ['Segoe UI', 'Arial', 'sans-serif'],
+                    }
+                }
+            }
+        }
+    </script>
+    <style>
+        /* Hamburger open state */
+        .hamburger.open span:nth-child(1) { transform: translateY(8px) rotate(45deg); }
+        .hamburger.open span:nth-child(2) { opacity: 0; }
+        .hamburger.open span:nth-child(3) { transform: translateY(-8px) rotate(-45deg); }
+
+        /* Hero overlay */
+        .hero::before {
+            content: "";
+            position: absolute;
+            inset: 0;
+            background: rgba(0,0,0,0.45);
+        }
+
+        /* Nav hidden/show logic */
+        #nav-links {
+            display: none;
+        }
+        #nav-links.nav-open {
+            display: flex;
+            flex-direction: column;
+            width: 100%;
+            margin-top: 12px;
+            background-color: #1b5e20;
+            border-radius: 8px;
+            overflow: hidden;
+        }
+        @media (min-width: 769px) {
+            #nav-links {
+                display: flex !important;
+                flex-direction: row;
+                width: auto;
+                margin-top: 0;
+                background: none;
+                border-radius: 0;
+                gap: 25px;
+            }
+        }
+
+        /* Testimonial card hover */
+        .testimonial-card { transition: transform 0.25s ease, box-shadow 0.25s ease; }
+        .testimonial-card:hover { transform: translateY(-4px); box-shadow: 0 8px 24px rgba(0,0,0,0.09); }
+    </style>
+</head>
+
+<!-- BODY -->
+<body class="font-sans min-h-screen flex flex-col bg-farm-bg text-[#333] leading-relaxed overflow-x-hidden">
+
+    <!-- NAVBAR -->
+    <nav class="bg-farm-green py-[18px] shadow-[0_2px_10px_rgba(0,0,0,0.1)] relative z-[1000]">
+        <div class="w-[90%] max-w-[1200px] mx-auto flex justify-between items-center flex-wrap">
+
+            <a href="index.html" class="text-white no-underline text-[1.4rem] font-bold max-[480px]:text-[1.1rem]">
+                Tunyem Farm & Consultation
+            </a>
+
+            <!-- Hamburger Button -->
+            <button
+                class="hamburger hidden max-[768px]:flex flex-col justify-center gap-[5px] bg-transparent border-none cursor-pointer p-[6px]"
+                id="hamburger"
+                aria-label="Toggle navigation"
+            >
+                <span class="block w-[26px] h-[3px] bg-white rounded-[3px] transition-all duration-300"></span>
+                <span class="block w-[26px] h-[3px] bg-white rounded-[3px] transition-all duration-300"></span>
+                <span class="block w-[26px] h-[3px] bg-white rounded-[3px] transition-all duration-300"></span>
+            </button>
+
+            <!-- Nav Links -->
+            <ul class="nav-links list-none" id="nav-links">
+                <li><a href="index.html"    class="no-underline text-white font-bold max-[768px]:block max-[768px]:px-5 max-[768px]:py-[14px] max-[768px]:border-b max-[768px]:border-white/10 max-[768px]:text-base max-[768px]:bg-white/10">Home</a></li>
+                <li><a href="about.html"    class="no-underline text-[#e8f5e9] font-medium transition-opacity duration-300 hover:text-white hover:opacity-90 max-[768px]:block max-[768px]:px-5 max-[768px]:py-[14px] max-[768px]:border-b max-[768px]:border-white/10 max-[768px]:text-base max-[768px]:hover:bg-white/10">About</a></li>
+                <li><a href="services.html" class="no-underline text-[#e8f5e9] font-medium transition-opacity duration-300 hover:text-white hover:opacity-90 max-[768px]:block max-[768px]:px-5 max-[768px]:py-[14px] max-[768px]:border-b max-[768px]:border-white/10 max-[768px]:text-base max-[768px]:hover:bg-white/10">Services</a></li>
+                <li><a href="gallery.html"  class="no-underline text-[#e8f5e9] font-medium transition-opacity duration-300 hover:text-white hover:opacity-90 max-[768px]:block max-[768px]:px-5 max-[768px]:py-[14px] max-[768px]:border-b max-[768px]:border-white/10 max-[768px]:text-base max-[768px]:hover:bg-white/10">Gallery</a></li>
+                <li><a href="contact.html"  class="no-underline text-[#e8f5e9] font-medium transition-opacity duration-300 hover:text-white hover:opacity-90 max-[768px]:block max-[768px]:px-5 max-[768px]:py-[14px] max-[768px]:border-b-0 max-[768px]:text-base max-[768px]:hover:bg-white/10">Contact</a></li>
+            </ul>
+        </div>
+    </nav>
+
+
+
+    <!-- MAIN -->
+    <main class="flex-1">
+
+        <!-- HERO -->
+        <section class="hero relative w-full h-[80vh] max-[768px]:h-[60vh] max-[480px]:h-[50vh] overflow-hidden">
+            <img src="images/crop image 2.avif" alt="field" class="w-full h-full object-cover block">
+            <div class="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 text-center text-white z-10 w-[90%] max-w-[800px]">
+                <h1 class="text-[3rem] max-[900px]:text-[2.2rem] max-[768px]:text-[1.7rem] max-[480px]:text-[1.4rem] mb-4">
+                    Welcome to Tunyem Farm & Consultation
+                </h1>
+                <p class="text-[1.2rem] max-[768px]:text-[0.95rem] max-[480px]:text-[0.88rem] mb-6">
+                    Your premier partner in commercial agricultural growth,
+                    farm setup management, and specialized pineapple cultivation.
+                </p>
+                <a href="services.html"
+                   class="inline-block bg-white text-farm-green px-[30px] py-3 max-[768px]:px-[22px] max-[768px]:py-[10px] max-[768px]:text-[0.95rem] max-[480px]:px-5 max-[480px]:py-3 no-underline font-bold rounded-[20px] transition duration-300 hover:opacity-90">
+                    Explore Our Services
+                </a>
+            </div>
+        </section>
+
+        <!-- ── STATS BAR ── -->
+        <section class="bg-farm-green text-white py-10 px-5">
+            <div class="w-[90%] max-w-[1200px] mx-auto grid grid-cols-2 md:grid-cols-4 gap-8 text-center">
+
+                <div>
+                    <p class="stat-num text-[2.6rem] font-bold leading-none" data-target="50">100+</p>
+                    <p class="text-farm-green-light text-[0.85rem] mt-1 uppercase tracking-wider">Farms Consulted</p>
+                </div>
+
+                <div>
+                    <p class="stat-num text-[2.6rem] font-bold leading-none" data-target="200">200+</p>
+                    <p class="text-farm-green-light text-[0.85rem] mt-1 uppercase tracking-wider">Acres Managed</p>
+                </div>
+
+                <div>
+                    <p class="stat-num text-[2.6rem] font-bold leading-none" data-target="5">5+</p>
+                    <p class="text-farm-green-light text-[0.85rem] mt-1 uppercase tracking-wider">Years Experience</p>
+                </div>
+
+                <div>
+                    <p class="stat-num text-[2.6rem] font-bold leading-none" data-target="98">98%</p>
+                    <p class="text-farm-green-light text-[0.85rem] mt-1 uppercase tracking-wider">% Client Satisfaction</p>
+                </div>
+
+            </div>
+        </section>
+
+        <!-- PRODUCE SHOWCASE -->
+        <section class="bg-white p-[30px] max-[768px]:p-5 rounded-lg shadow-[0_2px_5px_rgba(0,0,0,0.05)] my-10 w-[90%] max-w-[1200px] mx-auto">
+            <h2 class="text-farm-green text-[2rem] max-[768px]:text-[1.4rem] mb-5 border-b-[3px] border-farm-green-light pb-[10px]">
+                Our Primary Focus: Pineapple Agriculture
+            </h2>
+            <p class="text-[1.1rem] leading-relaxed mb-5">
+                Pineapples are highly profitable commodities requiring dedicated agro-expertise.
+                We specialize in optimization strategies that safeguard suckers from entry to maturity.
+            </p>
+
+            <div class="grid grid-cols-[repeat(auto-fit,minmax(280px,1fr))] max-[768px]:grid-cols-1 gap-6 mt-5">
+
+                <div class="bg-[#fafafa] border border-[#e0e0e0] rounded-lg p-5">
+                    <h3 class="text-farm-green-dark font-semibold mb-2">High-Yield Varieties</h3>
+                    <p>Guidance on selecting commercial-grade pineapple suckers engineered for environmental resilience, high sweetness indices, and rapid establishment metrics.</p>
+                </div>
+
+                <div class="bg-[#fafafa] border border-[#e0e0e0] rounded-lg p-5">
+                    <h3 class="text-farm-green-dark font-semibold mb-2">Soil & Climate Suitability</h3>
+                    <p>Scientific inspection of soil compositions, moisture availability parameters, and topography requirements crucial for optimizing complex root beds.</p>
+                </div>
+
+                <div class="bg-[#fafafa] border border-[#e0e0e0] rounded-lg p-5">
+                    <h3 class="text-farm-green-dark font-semibold mb-2">Yield Optimization</h3>
+                    <p>Consultancy services addressing strict cultivation schedules, structured fruit induction timelines, and targeted structural crop care.</p>
+                </div>
+
+            </div>
+        </section>
+
+        <!-- ── TESTIMONIALS ── -->
+        <section class="bg-white py-12 px-5">
+            <div class="w-[90%] max-w-[1200px] mx-auto">
+
+                <h2 class="text-farm-green text-[2rem] max-[768px]:text-[1.4rem] mb-2 border-b-[3px] border-farm-green-light pb-[10px]">
+                    What Our Clients Say
+                </h2>
+                <p class="text-[1rem] text-[#555] mb-8">Farmers and agribusiness owners who've worked with us.</p>
+
+                <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+
+                    <!-- Testimonial 1 -->
+                    <div class="testimonial-card bg-farm-bg border border-[#e0e0e0] rounded-xl p-6 flex flex-col gap-4">
+                        <div class="text-farm-green text-[1.8rem] leading-none">"</div>
+                        <p class="text-[0.97rem] text-[#444] flex-1">
+                            Tunyem's team transformed my 5-acre plot from a weed-infested field into a
+                            high-yielding pineapple farm within one season. Their induction timing was spot-on.
+                        </p>
+                        <div class="flex items-center gap-3 mt-2">
+                            <div class="w-10 h-10 rounded-full bg-farm-green flex items-center justify-center text-white font-bold text-sm flex-shrink-0">AO</div>
+                            <div>
+                                <p class="font-semibold text-[0.95rem] text-farm-green-dark">Ade Okafor</p>
+                                <p class="text-[0.8rem] text-[#888]">Smallholder Farmer, Ogun State</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Testimonial 2 -->
+                    <div class="testimonial-card bg-farm-bg border border-[#e0e0e0] rounded-xl p-6 flex flex-col gap-4">
+                        <div class="text-farm-green text-[1.8rem] leading-none">"</div>
+                        <p class="text-[0.97rem] text-[#444] flex-1">
+                            I had no experience in commercial agriculture before engaging Tunyem. They walked
+                            me through every phase — from soil prep to my first harvest. Outstanding mentorship.
+                        </p>
+                        <div class="flex items-center gap-3 mt-2">
+                            <div class="w-10 h-10 rounded-full bg-farm-green flex items-center justify-center text-white font-bold text-sm flex-shrink-0">NK</div>
+                            <div>
+                                <p class="font-semibold text-[0.95rem] text-farm-green-dark">Ngozi Kalu</p>
+                                <p class="text-[0.8rem] text-[#888]">Agri-investor, Rivers State</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Testimonial 3 -->
+                    <div class="testimonial-card bg-farm-bg border border-[#e0e0e0] rounded-xl p-6 flex flex-col gap-4">
+                        <div class="text-farm-green text-[1.8rem] leading-none">"</div>
+                        <p class="text-[0.97rem] text-[#444] flex-1">
+                            Their weed management program saved my second ratoon crop. I was about to lose
+                            everything — Tunyem diagnosed the problem fast and we recovered fully.
+                        </p>
+                        <div class="flex items-center gap-3 mt-2">
+                            <div class="w-10 h-10 rounded-full bg-farm-green flex items-center justify-center text-white font-bold text-sm flex-shrink-0">BI</div>
+                            <div>
+                                <p class="font-semibold text-[0.95rem] text-farm-green-dark">Biodun Idowu</p>
+                                <p class="text-[0.8rem] text-[#888]">Commercial Farmer, Osun State</p>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+        </section>
+
+    </main>
+
+  
+
+    <!-- FOOTER -->
+    <footer class="bg-farm-green text-white py-[30px] px-5 mt-auto flex flex-col items-center gap-5 border-t-4 border-farm-green-dark max-[768px]:py-5 max-[768px]:px-4 max-[768px]:text-center">
+        <div>
+            <p class="text-lg font-bold text-center">TUNYEM FARM & CONSULTATION</p>
+            <p class="text-center text-[0.9rem] opacity-80">© 2025 All rights reserved</p>
+        </div>
+    </footer>
+    <button id="backToTop" title="Go to top">
+    <i class="fa-solid fa-arrow-up"></i>
+</button>
+
+    <script src="js/app.js"></script>
+
+
+</body>
+</html>

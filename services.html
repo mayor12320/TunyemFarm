@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Services – Tunyem Farm & Consultation</title>
+        <link rel="stylesheet" href="css/style.css">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        'farm-green':       '#2e7d32',
+                        'farm-green-dark':  '#1b5e20',
+                        'farm-green-light': '#81c784',
+                        'farm-bg':          '#f5f7f2',
+                    },
+                    fontFamily: {
+                        sans: ['Segoe UI', 'Arial', 'sans-serif'],
+                    }
+                }
+            }
+        }
+    </script>
+    <style>
+        .hamburger.open span:nth-child(1) { transform: translateY(8px) rotate(45deg); }
+        .hamburger.open span:nth-child(2) { opacity: 0; }
+        .hamburger.open span:nth-child(3) { transform: translateY(-8px) rotate(-45deg); }
+    </style>
+</head>
+
+<body class="font-sans min-h-screen flex flex-col bg-farm-bg text-[#333] leading-relaxed overflow-x-hidden">
+
+    <!-- NAVBAR -->
+    <nav class="bg-farm-green py-[18px] shadow-[0_2px_10px_rgba(0,0,0,0.1)] relative z-[1000]">
+        <div class="w-[90%] max-w-[1200px] mx-auto flex justify-between items-center flex-wrap">
+
+            <a href="index.html" class="text-white no-underline text-[1.4rem] font-bold max-[480px]:text-[1.1rem]">
+                Tunyem Farm & Consultation
+            </a>
+
+            <button
+                class="hamburger hidden max-[768px]:flex flex-col justify-center gap-[5px] bg-transparent border-none cursor-pointer p-[6px]"
+                id="hamburger"
+                aria-label="Toggle navigation"
+            >
+                <span class="block w-[26px] h-[3px] bg-white rounded-[3px] transition-all duration-300"></span>
+                <span class="block w-[26px] h-[3px] bg-white rounded-[3px] transition-all duration-300"></span>
+                <span class="block w-[26px] h-[3px] bg-white rounded-[3px] transition-all duration-300"></span>
+            </button>
+
+            <ul
+                class="nav-links list-none flex gap-[25px] max-[768px]:hidden max-[768px]:flex-col max-[768px]:w-full max-[768px]:gap-0 max-[768px]:mt-3 max-[768px]:bg-farm-green-dark max-[768px]:rounded-lg max-[768px]:overflow-hidden"
+                id="nav-links"
+            >
+                <li><a href="index.html"    class="no-underline text-[#e8f5e9] font-medium transition-opacity duration-300 hover:text-white hover:opacity-90 max-[768px]:block max-[768px]:px-5 max-[768px]:py-[14px] max-[768px]:border-b max-[768px]:border-white/10 max-[768px]:text-base max-[768px]:hover:bg-white/10">Home</a></li>
+                <li><a href="about.html"    class="no-underline text-[#e8f5e9] font-medium transition-opacity duration-300 hover:text-white hover:opacity-90 max-[768px]:block max-[768px]:px-5 max-[768px]:py-[14px] max-[768px]:border-b max-[768px]:border-white/10 max-[768px]:text-base max-[768px]:hover:bg-white/10">About</a></li>
+                <li><a href="services.html" class="no-underline text-white font-bold max-[768px]:block max-[768px]:px-5 max-[768px]:py-[14px] max-[768px]:border-b max-[768px]:border-white/10 max-[768px]:text-base max-[768px]:bg-white/10">Services</a></li>
+                <li><a href="gallery.html"  class="no-underline text-[#e8f5e9] font-medium transition-opacity duration-300 hover:text-white hover:opacity-90 max-[768px]:block max-[768px]:px-5 max-[768px]:py-[14px] max-[768px]:border-b max-[768px]:border-white/10 max-[768px]:text-base max-[768px]:hover:bg-white/10">Gallery</a></li>
+                <li><a href="contact.html"  class="no-underline text-[#e8f5e9] font-medium transition-opacity duration-300 hover:text-white hover:opacity-90 max-[768px]:block max-[768px]:px-5 max-[768px]:py-[14px] max-[768px]:text-base max-[768px]:hover:bg-white/10">Contact</a></li>
+            </ul>
+        </div>
+    </nav>
+  
+
+    <!-- MAIN -->
+    <main class="flex-1 w-[90%] max-w-[1200px] mx-auto py-10">
+
+        <section class="bg-white rounded-lg shadow-[0_2px_5px_rgba(0,0,0,0.05)] p-8 max-[768px]:p-5">
+
+            <h1 class="text-farm-green text-[2rem] max-[768px]:text-[1.4rem] mb-3 border-b-[3px] border-farm-green-light pb-[10px]">
+                Our Specialized Services
+            </h1>
+            <p class="text-[1.05rem] text-[#555] mb-8">
+                We deliver comprehensive, on-field operational assistance engineered specifically to optimize the lifespan of pineapple plantations.
+            </p>
+
+            <div class="grid grid-cols-[repeat(auto-fit,minmax(240px,1fr))] max-[768px]:grid-cols-1 gap-6">
+
+                <div class="bg-[#fafafa] border border-[#e0e0e0] rounded-lg p-6 flex flex-col items-start gap-3">
+                    <i class="fa-solid fa-mountain text-farm-green text-[2rem]"></i>
+                    <h3 class="text-farm-green-dark font-semibold text-[1.05rem]">Clearing of Land</h3>
+                    <p class="text-[0.95rem] text-[#555]">Mechanical and structural clearing of topsoil beds to prepare flat, aerated ground tailored for row placement matrices.</p>
+                </div>
+
+                <div class="bg-[#fafafa] border border-[#e0e0e0] rounded-lg p-6 flex flex-col items-start gap-3">
+                    <i class="fa-solid fa-seedling text-farm-green text-[2rem]"></i>
+                    <h3 class="text-farm-green-dark font-semibold text-[1.05rem]">Planting of Suckers</h3>
+                    <p class="text-[0.95rem] text-[#555]">Precise installation of clean, healthy pineapple suckers at verified intervals to secure balanced nutrition deployment.</p>
+                </div>
+
+                <div class="bg-[#fafafa] border border-[#e0e0e0] rounded-lg p-6 flex flex-col items-start gap-3">
+                    <i class="fa-solid fa-wand-magic-sparkles text-farm-green text-[2rem]"></i>
+                    <h3 class="text-farm-green-dark font-semibold text-[1.05rem]">Induction of Pineapples</h3>
+                    <p class="text-[0.95rem] text-[#555]">Carefully timed flower induction management to regulate uniform harvesting output and capture peak market values.</p>
+                </div>
+
+                <div class="bg-[#fafafa] border border-[#e0e0e0] rounded-lg p-6 flex flex-col items-start gap-3">
+                    <i class="fa-solid fa-scissors text-farm-green text-[2rem]"></i>
+                    <h3 class="text-farm-green-dark font-semibold text-[1.05rem]">Clearing of Unwanted Weeds</h3>
+                    <p class="text-[0.95rem] text-[#555]">Integrated weed eradication programs designed to mitigate resource competition without damaging vulnerable crop roots.</p>
+                </div>
+
+            </div>
+        </section>
+
+    </main>
+
+    <!-- FOOTER -->
+    <footer class="bg-farm-green text-white py-[30px] px-5 mt-auto flex flex-col items-center gap-5 border-t-4 border-farm-green-dark max-[768px]:py-5 max-[768px]:px-4 max-[768px]:text-center">
+        <div>
+            <p class="text-lg font-bold text-center">TUNYEM FARM & CONSULTATION</p>
+            <p class="text-center text-[0.9rem] opacity-80">© All rights reserved</p>
+        </div>
+    </footer>
+       <button id="backToTop" title="Go to top">
+    <i class="fa-solid fa-arrow-up"></i>
+</button>
+
+
+    <script src="/js/app.js"></script>
+    <script>
+        const hamburger = document.getElementById('hamburger');
+        const navLinks  = document.getElementById('nav-links');
+
+        hamburger.addEventListener('click', () => {
+            hamburger.classList.toggle('open');
+            navLinks.classList.toggle('!flex');
+            navLinks.classList.toggle('hidden');
+        });
+    </script>
+
+</body>
+</html>

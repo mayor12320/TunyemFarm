@@ -1,0 +1,184 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tunyem Farm & Consultation — Gallery</title>
+    <link rel="stylesheet" href="css/style.css">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        'farm-green':       '#2e7d32',
+                        'farm-green-dark':  '#1b5e20',
+                        'farm-green-light': '#81c784',
+                        'farm-bg':          '#f5f7f2',
+                    },
+                    fontFamily: {
+                        sans: ['Segoe UI', 'Arial', 'sans-serif'],
+                    }
+                }
+            }
+        }
+    </script>
+    <style>
+        /* Hamburger open/close animation */
+        .hamburger.open span:nth-child(1) { transform: translateY(8px) rotate(45deg); }
+        .hamburger.open span:nth-child(2) { opacity: 0; }
+        .hamburger.open span:nth-child(3) { transform: translateY(-8px) rotate(-45deg); }
+    </style>
+</head>
+
+<body class="font-sans min-h-screen flex flex-col bg-farm-bg text-[#333] leading-relaxed overflow-x-hidden">
+
+    <!-- NAVBAR -->
+    <nav class="bg-farm-green py-[18px] shadow-[0_2px_10px_rgba(0,0,0,0.1)] relative z-[1000]">
+        <div class="w-[90%] max-w-[1200px] mx-auto flex justify-between items-center flex-wrap">
+
+            <a href="index.html" class="text-white no-underline text-[1.4rem] font-bold max-[480px]:text-[1.1rem]">
+                Tunyem Farm & Consultation
+            </a>
+
+            <!-- Hamburger (mobile only) -->
+            <button
+                class="hamburger hidden max-[768px]:flex flex-col justify-center gap-[5px] bg-transparent border-none cursor-pointer p-[6px]"
+                id="hamburger"
+                aria-label="Toggle navigation"
+            >
+                <span class="block w-[26px] h-[3px] bg-white rounded-[3px] transition-all duration-300"></span>
+                <span class="block w-[26px] h-[3px] bg-white rounded-[3px] transition-all duration-300"></span>
+                <span class="block w-[26px] h-[3px] bg-white rounded-[3px] transition-all duration-300"></span>
+            </button>
+
+            <!-- Nav Links -->
+            <ul
+                id="nav-links"
+                class="nav-links list-none flex gap-[25px]
+                       max-[768px]:hidden max-[768px]:flex-col max-[768px]:w-full max-[768px]:gap-0
+                       max-[768px]:mt-3 max-[768px]:bg-farm-green-dark max-[768px]:rounded-lg max-[768px]:overflow-hidden"
+            >
+                <li><a href="index.html"    class="no-underline text-[#e8f5e9] font-medium transition-opacity duration-300 hover:text-white hover:opacity-90 max-[768px]:block max-[768px]:px-5 max-[768px]:py-[14px] max-[768px]:border-b max-[768px]:border-white/10 max-[768px]:hover:bg-white/10">Home</a></li>
+                <li><a href="about.html"    class="no-underline text-[#e8f5e9] font-medium transition-opacity duration-300 hover:text-white hover:opacity-90 max-[768px]:block max-[768px]:px-5 max-[768px]:py-[14px] max-[768px]:border-b max-[768px]:border-white/10 max-[768px]:hover:bg-white/10">About</a></li>
+                <li><a href="services.html" class="no-underline text-[#e8f5e9] font-medium transition-opacity duration-300 hover:text-white hover:opacity-90 max-[768px]:block max-[768px]:px-5 max-[768px]:py-[14px] max-[768px]:border-b max-[768px]:border-white/10 max-[768px]:hover:bg-white/10">Services</a></li>
+                <li><a href="gallery.html"  class="no-underline text-white font-bold max-[768px]:block max-[768px]:px-5 max-[768px]:py-[14px] max-[768px]:border-b max-[768px]:border-white/10 max-[768px]:hover:bg-white/10">Gallery</a></li>
+                <li><a href="contact.html"  class="no-underline text-[#e8f5e9] font-medium transition-opacity duration-300 hover:text-white hover:opacity-90 max-[768px]:block max-[768px]:px-5 max-[768px]:py-[14px] max-[768px]:border-b-0 max-[768px]:hover:bg-white/10">Contact</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <!-- MAIN -->
+    <main class="flex-1">
+
+
+        <!-- GALLERY SECTION -->
+        <section class="bg-white p-[30px] max-[768px]:p-5 rounded-lg shadow-[0_2px_5px_rgba(0,0,0,0.05)] mb-10 w-[90%] max-w-[1200px] mx-auto mt-10">
+
+            <h1 class="text-farm-green text-[2rem] max-[768px]:text-[1.4rem] mb-5 border-b-[3px] border-farm-green-light pb-[10px]">
+                Our Gallery
+            </h1>
+            <p class="text-[1.1rem] leading-relaxed mb-5">
+                Take a visual walkthrough of our field operations from initial topsoil management
+                milestones down to peak seasonal pineapple harvests.
+            </p>
+
+            <!-- Gallery Grid -->
+            <div class="grid grid-cols-[repeat(auto-fit,minmax(280px,1fr))] max-[768px]:grid-cols-1 gap-6 mt-5">
+
+                <!-- Card 1 -->
+                <div class="bg-white border border-[#e0e0e0] rounded-[20px] overflow-hidden shadow-[0_2px_5px_rgba(0,0,0,0.05)] transition-transform duration-300 hover:-translate-y-[5px]">
+                    <div class="w-full h-[220px] max-[768px]:h-[200px] max-[480px]:h-[180px] bg-[#e0e0e0] overflow-hidden">
+                        <img src="/images/pineapple land.avif" alt="Clearing Land" class="w-full h-full object-cover">
+                    </div>
+                    <div class="p-[15px]">
+                        <h3 class="text-farm-green font-semibold text-[1.15rem] mb-1">1. Clearing of Land</h3>
+                        <p class="text-[0.9rem] text-[#666] leading-[1.4]">Removing unwanted brush, rocks, and setting clean, aerated row beds optimized for standard spacing layouts.</p>
+                    </div>
+                </div>
+
+                <!-- Card 2 -->
+                <div class="bg-white border border-[#e0e0e0] rounded-[20px] overflow-hidden shadow-[0_2px_5px_rgba(0,0,0,0.05)] transition-transform duration-300 hover:-translate-y-[5px]">
+                    <div class="w-full h-[220px] max-[768px]:h-[200px] max-[480px]:h-[180px] bg-[#e0e0e0] overflow-hidden">
+                        <img src="/images/pineapple suckers.avif" alt="Planting Suckers" class="w-full h-full object-cover">
+                    </div>
+                    <div class="p-[15px]">
+                        <h3 class="text-farm-green font-semibold text-[1.15rem] mb-1">2. Planting of Suckers</h3>
+                        <p class="text-[0.9rem] text-[#666] leading-[1.4]">Carefully selecting premium commercial-grade plant suckers and setting root parameters to ensure high nutrient intake.</p>
+                    </div>
+                </div>
+
+                <!-- Card 3 -->
+                <div class="bg-white border border-[#e0e0e0] rounded-[20px] overflow-hidden shadow-[0_2px_5px_rgba(0,0,0,0.05)] transition-transform duration-300 hover:-translate-y-[5px]">
+                    <div class="w-full h-[220px] max-[768px]:h-[200px] max-[480px]:h-[180px] bg-[#e0e0e0] overflow-hidden">
+                        <img src="/images/pineapple induction.webp" alt="Pineapple Induction" class="w-full h-full object-cover">
+                    </div>
+                    <div class="p-[15px]">
+                        <h3 class="text-farm-green font-semibold text-[1.15rem] mb-1">3. Pineapple Induction</h3>
+                        <p class="text-[0.9rem] text-[#666] leading-[1.4]">Executing precise natural or controlled forced flowering cycles to time fruit development alongside target high-value markets.</p>
+                    </div>
+                </div>
+
+                <!-- Card 4 -->
+                <div class="bg-white border border-[#e0e0e0] rounded-[20px] overflow-hidden shadow-[0_2px_5px_rgba(0,0,0,0.05)] transition-transform duration-300 hover:-translate-y-[5px]">
+                    <div class="w-full h-[220px] max-[768px]:h-[200px] max-[480px]:h-[180px] bg-[#e0e0e0] overflow-hidden">
+                        <img src="/images/harvest pineapple.avif" alt="Harvesting Pineapple" class="w-full h-full object-cover">
+                    </div>
+                    <div class="p-[15px]">
+                        <h3 class="text-farm-green font-semibold text-[1.15rem] mb-1">4. Peak Field Harvesting</h3>
+                        <p class="text-[0.9rem] text-[#666] leading-[1.4]">Carefully picking vibrant yellow, fully-mature crops to limit bruising and protect shipping weights.</p>
+                    </div>
+                </div>
+
+                <!-- Card 5 -->
+                <div class="bg-white border border-[#e0e0e0] rounded-[20px] overflow-hidden shadow-[0_2px_5px_rgba(0,0,0,0.05)] transition-transform duration-300 hover:-translate-y-[5px]">
+                    <div class="w-full h-[220px] max-[768px]:h-[200px] max-[480px]:h-[180px] bg-[#e0e0e0] overflow-hidden">
+                        <img src="/images/sucker pineapple.avif" alt="Crop Feeding" class="w-full h-full object-cover">
+                    </div>
+                    <div class="p-[15px]">
+                        <h3 class="text-farm-green font-semibold text-[1.15rem] mb-1">5. Precision Crop Nutrition</h3>
+                        <p class="text-[0.9rem] text-[#666] leading-[1.4]">Executing scheduled macro-nutrient leaf and root feeding routines to maximize the flesh weight and brix (sweetness) ratings.</p>
+                    </div>
+                </div>
+
+                <!-- Card 6 -->
+                <div class="bg-white border border-[#e0e0e0] rounded-[20px] overflow-hidden shadow-[0_2px_5px_rgba(0,0,0,0.05)] transition-transform duration-300 hover:-translate-y-[5px]">
+                    <div class="w-full h-[220px] max-[768px]:h-[200px] max-[480px]:h-[180px] bg-[#e0e0e0] overflow-hidden">
+                        <img src="/images/fertilizer pinapple.avif" alt="Sucker Selection" class="w-full h-full object-cover">
+                    </div>
+                    <div class="p-[15px]">
+                        <h3 class="text-farm-green font-semibold text-[1.15rem] mb-1">6. Nursery Sucker Treatment</h3>
+                        <p class="text-[0.9rem] text-[#666] leading-[1.4]">Sorting, grading, and applying vital fungal protections to healthy suckers to maximize survival rates upon transplanting.</p>
+                    </div>
+                </div>
+
+            </div>
+        </section>
+    </main>
+
+    <!-- FOOTER -->
+    <footer class="bg-farm-green text-white py-[30px] px-5 mt-auto flex flex-col items-center gap-5 border-t-4 border-farm-green-dark max-[768px]:py-5 max-[768px]:px-4 text-center">
+        <div>
+            <p class="text-lg font-bold">TUNYEM FARM & CONSULTATION</p>
+            <p class="text-[0.9rem] opacity-80">© All rights reserved</p>
+        </div>
+    </footer>
+               <!-- Back to Top Button -->
+<button id="backToTop" title="Go to top">
+<i class="fa-solid fa-arrow-up"></i></button>
+
+    <script src="js/app.js"></script>
+    <script>
+        const hamburger = document.getElementById('hamburger');
+        const navLinks  = document.getElementById('nav-links');
+
+        hamburger.addEventListener('click', () => {
+            hamburger.classList.toggle('open');
+            navLinks.classList.toggle('!flex');
+            navLinks.classList.toggle('hidden');
+        });
+    </script>
+ 
+</body>
+</html>

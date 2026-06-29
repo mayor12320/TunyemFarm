@@ -1,0 +1,263 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>About – Tunyem Farm & Consultation</title>
+    <link rel="stylesheet" href="css/style.css">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        'farm-green':       '#2e7d32',
+                        'farm-green-dark':  '#1b5e20',
+                        'farm-green-light': '#81c784',
+                        'farm-bg':          '#f5f7f2',
+                    },
+                    fontFamily: {
+                        sans: ['Segoe UI', 'Arial', 'sans-serif'],
+                    }
+                }
+            }
+        }
+    </script>
+    <style>
+        .hamburger.open span:nth-child(1) { transform: translateY(8px) rotate(45deg); }
+        .hamburger.open span:nth-child(2) { opacity: 0; }
+        .hamburger.open span:nth-child(3) { transform: translateY(-8px) rotate(-45deg); }
+    </style>
+</head>
+
+<body class="font-sans min-h-screen flex flex-col bg-farm-bg text-[#333] leading-relaxed overflow-x-hidden">
+
+    <!-- NAVBAR -->
+    <nav class="bg-farm-green py-[18px] shadow-[0_2px_10px_rgba(0,0,0,0.1)] relative z-[1000]">
+        <div class="w-[90%] max-w-[1200px] mx-auto flex justify-between items-center flex-wrap">
+
+            <a href="index.html" class="text-white no-underline text-[1.4rem] font-bold max-[480px]:text-[1.1rem]">
+                Tunyem Farm & Consultation
+            </a>
+
+            <button
+                class="hamburger hidden max-[768px]:flex flex-col justify-center gap-[5px] bg-transparent border-none cursor-pointer p-[6px]"
+                id="hamburger"
+                aria-label="Toggle navigation"
+            >
+                <span class="block w-[26px] h-[3px] bg-white rounded-[3px] transition-all duration-300"></span>
+                <span class="block w-[26px] h-[3px] bg-white rounded-[3px] transition-all duration-300"></span>
+                <span class="block w-[26px] h-[3px] bg-white rounded-[3px] transition-all duration-300"></span>
+            </button>
+
+            <ul
+                class="nav-links list-none flex gap-[25px] max-[768px]:hidden max-[768px]:flex-col max-[768px]:w-full max-[768px]:gap-0 max-[768px]:mt-3 max-[768px]:bg-farm-green-dark max-[768px]:rounded-lg max-[768px]:overflow-hidden"
+                id="nav-links"
+            >
+                <li><a href="index.html"    class="no-underline text-[#e8f5e9] font-medium transition-opacity duration-300 hover:text-white hover:opacity-90 max-[768px]:block max-[768px]:px-5 max-[768px]:py-[14px] max-[768px]:border-b max-[768px]:border-white/10 max-[768px]:text-base max-[768px]:hover:bg-white/10">Home</a></li>
+                <li><a href="about.html"    class="no-underline text-white font-bold max-[768px]:block max-[768px]:px-5 max-[768px]:py-[14px] max-[768px]:border-b max-[768px]:border-white/10 max-[768px]:text-base max-[768px]:bg-white/10">About</a></li>
+                <li><a href="services.html" class="no-underline text-[#e8f5e9] font-medium transition-opacity duration-300 hover:text-white hover:opacity-90 max-[768px]:block max-[768px]:px-5 max-[768px]:py-[14px] max-[768px]:border-b max-[768px]:border-white/10 max-[768px]:text-base max-[768px]:hover:bg-white/10">Services</a></li>
+                <li><a href="gallery.html"  class="no-underline text-[#e8f5e9] font-medium transition-opacity duration-300 hover:text-white hover:opacity-90 max-[768px]:block max-[768px]:px-5 max-[768px]:py-[14px] max-[768px]:border-b max-[768px]:border-white/10 max-[768px]:text-base max-[768px]:hover:bg-white/10">Gallery</a></li>
+                <li><a href="contact.html"  class="no-underline text-[#e8f5e9] font-medium transition-opacity duration-300 hover:text-white hover:opacity-90 max-[768px]:block max-[768px]:px-5 max-[768px]:py-[14px] max-[768px]:text-base max-[768px]:hover:bg-white/10">Contact</a></li>
+            </ul>
+        </div>
+    </nav>
+ 
+
+    <!-- MAIN -->
+    <main class="flex-1 w-[90%] max-w-[1200px] mx-auto py-10 flex flex-col gap-10">
+
+        <!-- Section 1: Introduction -->
+        <section class="bg-white rounded-lg shadow-[0_2px_5px_rgba(0,0,0,0.05)] p-8 max-[768px]:p-5">
+            <h1 class="text-farm-green text-[2rem] max-[768px]:text-[1.4rem] mb-5 border-b-[3px] border-farm-green-light pb-[10px]">
+                About Tunyem Farm & Consultation
+            </h1>
+            <div class="flex flex-col gap-4 text-[1.05rem] text-[#444]">
+                <p>Tunyem Farm & Consultation is dedicated to providing quality agricultural services, farm management solutions, and expert consultation to farmers and agribusinesses. We aim to scale operations safely while minimizing agricultural risk indicators.</p>
+                <p>Our mission is to promote sustainable farming practices and help clients achieve greater productivity and profitability through modern agricultural techniques.</p>
+                <p>By providing hand-held consultation across land prep work, nursery selection, and crop induction milestones, we transform traditional setups into thriving, highly structured economic agro-ventures.</p>
+            </div>
+        </section>
+
+        <!-- Section 2: Core Pillars -->
+        <section class="bg-white rounded-lg shadow-[0_2px_5px_rgba(0,0,0,0.05)] p-8 max-[768px]:p-5">
+            <h2 class="text-farm-green text-[1.7rem] max-[768px]:text-[1.3rem] mb-3 border-b-[3px] border-farm-green-light pb-[10px]">
+                Our Core Agricultural Pillars
+            </h2>
+            <p class="text-[1.05rem] text-[#555] mb-6">
+                We approach farming with a blend of time-tested field experience and modern agro-science to ensure your pineapple fields yield maximum returns.
+            </p>
+
+            <div class="grid grid-cols-[repeat(auto-fit,minmax(260px,1fr))] max-[768px]:grid-cols-1 gap-6">
+
+                <div class="bg-[#fafafa] border border-[#e0e0e0] rounded-lg p-5">
+                    <h3 class="text-farm-green-dark font-semibold mb-2 flex items-center gap-2">
+                        <i class="fa-solid fa-leaf text-farm-green"></i> Sustainability
+                    </h3>
+                    <p class="text-[0.97rem] text-[#555]">We implement ecological weed management and precise fertilizer schedules that shield the long-term health of your soil from degradation.</p>
+                </div>
+
+                <div class="bg-[#fafafa] border border-[#e0e0e0] rounded-lg p-5">
+                    <h3 class="text-farm-green-dark font-semibold mb-2 flex items-center gap-2">
+                        <i class="fa-solid fa-chart-line text-farm-green"></i> Precision Yields
+                    </h3>
+                    <p class="text-[0.97rem] text-[#555]">Pineapple farming relies heavily on strict timings. Our forced induction strategies help target precise high-demand market seasons.</p>
+                </div>
+
+                <div class="bg-[#fafafa] border border-[#e0e0e0] rounded-lg p-5">
+                    <h3 class="text-farm-green-dark font-semibold mb-2 flex items-center gap-2">
+                        <i class="fa-solid fa-handshake text-farm-green"></i> Local Partnership
+                    </h3>
+                    <p class="text-[0.97rem] text-[#555]">We work directly alongside farm laborers and landowners, providing practical field mentoring right inside the crop rows.</p>
+                </div>
+
+            </div>
+        </section>
+
+        <!-- Section 3: Consultation Roadmap -->
+        <section class="bg-white rounded-lg shadow-[0_2px_5px_rgba(0,0,0,0.05)] p-8 max-[768px]:p-5">
+            <h2 class="text-farm-green text-[1.7rem] max-[768px]:text-[1.3rem] mb-3 border-b-[3px] border-farm-green-light pb-[10px]">
+                How We Guide Our Clients
+            </h2>
+            <p class="text-[1.05rem] text-[#555] mb-6">
+                Whether you are establishing a new plantation or optimizing an existing plot, our consultative roadmap keeps your investment secure:
+            </p>
+
+            <div class="flex flex-col gap-4">
+
+                <div class="bg-[#fafafa] border-l-[5px] border-farm-green rounded-r-lg p-5">
+                    <p class="font-semibold text-farm-green-dark mb-1">Phase 1: Soil & Site Assessment</p>
+                    <p class="text-[0.95rem] text-[#555]">We run a complete checklist on your land clearing requirements, slope layout, and drainage pathways to avoid waterlogging damage to future sucker roots.</p>
+                </div>
+
+                <div class="bg-[#fafafa] border-l-[5px] border-farm-green rounded-r-lg p-5">
+                    <p class="font-semibold text-farm-green-dark mb-1">Phase 2: Sucker Sourcing & Planting Layouts</p>
+                    <p class="text-[0.95rem] text-[#555]">We help select high-grade pineapple suckers and design exact spacing grids to prevent future light and resource competition between growing plants.</p>
+                </div>
+
+                <div class="bg-[#fafafa] border-l-[5px] border-farm-green rounded-r-lg p-5">
+                    <p class="font-semibold text-farm-green-dark mb-1">Phase 3: Plantation Maintenance & Flower Induction</p>
+                    <p class="text-[0.95rem] text-[#555]">From intensive weed eradication strategies to chemically managing uniform plant fruiting cycles, we monitor your fields right up to standard harvesting windows.</p>
+                </div>
+
+            </div>
+        </section>
+
+        <!-- Meet Our Team -->
+<section id="team" class="py-16 bg-gray-50">
+    <div class="max-w-7xl mx-auto px-6">
+
+        <div class="text-center mb-12">
+            <h2 class="text-4xl font-bold text-green-700">Meet Our Team</h2>
+            <p class="mt-4 text-gray-600">
+                Our experienced professionals are committed to helping farmers
+                achieve greater productivity through modern agricultural practices.
+            </p>
+        </div>
+
+        <div class="grid md:grid-cols-3 gap-8">
+
+            <!-- Team Member 1 -->
+            <div class="bg-white rounded-2xl shadow-lg overflow-hidden hover:shadow-2xl transition duration-300">
+
+                <img src="images/ceo.jpg" alt="CEO"
+                    class="w-full h-72 object-cover">
+
+                <div class="p-6 text-center">
+                    <h3 class="text-2xl font-bold text-gray-800">
+                        Mr. Tunde Adeyemi
+                    </h3>
+
+                    <p class="text-green-600 font-semibold mt-2">
+                        Chief Executive Officer
+                    </p>
+
+                    <p class="text-gray-600 mt-4">
+                        Leads the company with years of agricultural experience,
+                        providing strategic direction and innovative farming
+                        solutions.
+                    </p>
+                </div>
+
+            </div>
+
+            <!-- Team Member 2 -->
+            <div class="bg-white rounded-2xl shadow-lg overflow-hidden hover:shadow-2xl transition duration-300">
+
+                <img src="images/manager.jpg" alt="Farm Manager"
+                    class="w-full h-72 object-cover">
+
+                <div class="p-6 text-center">
+                    <h3 class="text-2xl font-bold text-gray-800">
+                        Mrs. Grace Johnson
+                    </h3>
+
+                    <p class="text-green-600 font-semibold mt-2">
+                        Farm Manager
+                    </p>
+
+                    <p class="text-gray-600 mt-4">
+                        Oversees daily farm operations, ensuring healthy crops,
+                        livestock management, and sustainable farming practices.
+                    </p>
+                </div>
+
+            </div>
+
+            <!-- Team Member 3 -->
+            <div class="bg-white rounded-2xl shadow-lg overflow-hidden hover:shadow-2xl transition duration-300">
+
+                <img src="images/consultant.jpg" alt="Agricultural Consultant"
+                    class="w-full h-72 object-cover">
+
+                <div class="p-6 text-center">
+                    <h3 class="text-2xl font-bold text-gray-800">
+                        Mr. Samuel Oladele
+                    </h3>
+
+                    <p class="text-green-600 font-semibold mt-2">
+                        Agricultural Consultant
+                    </p>
+
+                    <p class="text-gray-600 mt-4">
+                        Provides expert guidance on crop production, livestock
+                        management, agribusiness planning, and farm development.
+                    </p>
+                </div>
+
+            </div>
+
+        </div>
+
+    </div>
+</section>
+
+    </main>
+
+    <!-- FOOTER -->
+    <footer class="bg-farm-green text-white py-[30px] px-5 mt-auto flex flex-col items-center gap-5 border-t-4 border-farm-green-dark max-[768px]:py-5 max-[768px]:px-4 max-[768px]:text-center">
+        <div>
+            <p class="text-lg font-bold text-center">TUNYEM FARM & CONSULTATION</p>
+            <p class="text-center text-[0.9rem] opacity-80">© All rights reserved</p>
+        </div>
+    </footer>
+     <!-- Back to Top Button -->
+<button id="backToTop" title="Go to top">
+<i class="fa-solid fa-arrow-up"></i></button>
+
+    <script src="/js/app.js"></script>
+    <script>
+        const hamburger = document.getElementById('hamburger');
+        const navLinks  = document.getElementById('nav-links');
+
+        hamburger.addEventListener('click', () => {
+            hamburger.classList.toggle('open');
+            navLinks.classList.toggle('!flex');
+            navLinks.classList.toggle('hidden');
+        });
+    </script>
+  
+</body>
+
+</html>
